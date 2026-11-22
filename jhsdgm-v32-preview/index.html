@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarif Hasan Sagor: Digital Marketing Expert</title>
+<meta name="description" content="SEO, Meta ads and WordPress websites by Jarif Hasan Sagor, a certified digital marketing expert in Bangladesh working with clients worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script>document.documentElement.classList.add("js")</script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark stamp · custom direction (brand: JHSDGM white & blue) · signature: WebGL particle globe + "Tell me what you need" matcher in the hero · waive 38iii: one accent word in the hero headline, a brand device used once · waive 58: portfolio homepage, the work, services, guides and process sections are the content asked for */
+:root{
+  --bg:#F7FAFF; --surface:#FCFEFF; --on-navy:#F2F8FF; --pale:#C9DCF2; --shadow:rgba(3,20,43,.35); --ink:#10243E; --muted:#54687F;
+  --blue:#1565C0; --sky:#42A5F5; --navy:#0A2547; --navy-2:#0E2F57;
+  --line:#D9E6F5; --green:#2E7D32; --red:#C62828;
+  --font-head:"Sora",sans-serif; --font-body:"Inter",sans-serif;
+  --radius:18px; --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:var(--surface);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.wordmark{font-family:var(--font-head);font-weight:800;font-size:24px;letter-spacing:.02em;color:var(--ink)}
+.wordmark .dot{color:var(--red)}
+.wordmark small{display:block;font-family:var(--font-body);font-weight:500;font-size:11.5px;color:var(--muted);letter-spacing:0}
+.nav nav{display:flex;gap:24px}
+.nav nav a{color:var(--ink);font-size:15.5px;font-weight:500}
+.nav nav a:hover{color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:var(--on-navy);font-weight:600;font-size:15.5px;padding:12px 24px;border-radius:999px;border:0;cursor:pointer}
+.btn:hover{background:var(--navy-2)}
+.btn:active{transform:scale(.98)}
+.chip:active{transform:scale(.97)}
+button:disabled{opacity:.55;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--on-navy);border:1.5px solid var(--sky)}
+.btn.ghost:hover{border-color:var(--on-navy)}
+@media(max-width:760px){.nav nav{display:none}}
+
+/* hero */
+.hero{position:relative;background:var(--navy);color:var(--on-navy);overflow:clip}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-inner{position:relative;z-index:2;padding:84px 0 64px;max-width:760px}
+.hero h1{text-wrap:balance;font-family:var(--font-head);font-weight:800;font-size:clamp(38px,6vw,62px);line-height:1.08;overflow-wrap:break-word;min-width:0}
+.hero h1 .hl{color:var(--sky)}
+.hero .sub{margin-top:20px;font-size:19px;color:var(--pale);max-width:34em}
+.hero .actions{margin-top:28px;display:flex;gap:16px;flex-wrap:wrap}
+.matcher{position:relative;z-index:2;margin:8px 0 72px;background:var(--surface);color:var(--ink);border-radius:var(--radius);padding:24px;box-shadow:0 24px 60px var(--shadow)}
+.matcher h2{font-family:var(--font-head);font-size:22px;font-weight:700}
+.matcher p{color:var(--muted);font-size:15.5px;margin-top:4px}
+.matcher form{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+.matcher input{flex:1;min-width:220px;font:inherit;font-size:16px;padding:12px 16px;border:1.5px solid var(--line);border-radius:12px;color:var(--ink);background:var(--bg)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{white-space:nowrap;font-size:13.5px;font-weight:500;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--muted);cursor:pointer}
+.chip:hover{border-color:var(--sky);color:var(--blue)}
+.match-result{margin-top:16px;border-top:1px solid var(--line);padding-top:16px;display:none}
+.match-result.show{display:block}
+.match-result .card-link{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px dashed var(--line)}
+.match-result .card-link:last-child{border-bottom:0}
+.match-result .card-link b{font-family:var(--font-head);font-size:16.5px;color:var(--ink)}
+.match-result .card-link span{color:var(--muted);font-size:14.5px;display:block}
+.match-result .go{font-weight:600;white-space:nowrap}
+
+/* sections */
+section{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:40px}
+.sec-head h2{text-wrap:balance;font-family:var(--font-head);font-weight:700;font-size:clamp(28px,4vw,38px);line-height:1.15}
+.sec-head p{color:var(--muted);margin-top:12px}
+
+/* work */
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media(max-width:960px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.grid{grid-template-columns:minmax(0,1fr)}}
+.work-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:clip;transform-style:preserve-3d;will-change:transform}
+.work-card .thumb{height:170px;position:relative;overflow:clip}
+.work-card .thumb canvas{position:absolute;inset:0;width:100%;height:100%}
+.work-card .body{padding:24px}
+.work-card .cat{font-size:13.5px;color:var(--blue);font-weight:600}
+.work-card h3{font-family:var(--font-head);font-size:20px;font-weight:700;margin-top:8px;line-height:1.25}
+.work-card p{color:var(--muted);font-size:15px;margin-top:8px}
+.work-card .stack{font-size:13.5px;color:var(--muted);margin-top:16px}
+.work-card .visit{font-weight:600;display:inline-block;margin-top:12px}
+.tilt{transition:transform .35s ease}
+@media(hover:none){.tilt{transition:none}}
+
+/* starting points */
+.starts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+@media(max-width:760px){.starts{grid-template-columns:minmax(0,1fr)}}
+.start{display:flex;gap:20px;padding:28px 0;border-bottom:1px solid var(--line)}
+.start .num{font-family:var(--font-head);font-weight:800;font-size:15px;color:var(--sky);padding-top:4px}
+.start h3{font-family:var(--font-head);font-size:19px;font-weight:700}
+.start h3 a{color:var(--ink)}
+.start h3 a:hover{color:var(--blue)}
+.start p{color:var(--muted);font-size:15.5px;margin-top:4px}
+
+/* guides */
+.guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media(max-width:760px){.guides{grid-template-columns:minmax(0,1fr)}}
+.guide{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.guide .cat{font-size:13.5px;color:var(--blue);font-weight:600}
+.guide h3{font-family:var(--font-head);font-size:19.5px;font-weight:700;margin-top:8px;line-height:1.3}
+.guide h3 a{color:var(--ink)}
+.guide h3 a:hover{color:var(--blue)}
+.guide p{color:var(--muted);font-size:15px;margin-top:8px}
+
+/* process */
+.process{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+@media(max-width:960px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.steps{grid-template-columns:minmax(0,1fr)}}
+.step h3{font-family:var(--font-head);font-size:18px;font-weight:700}
+.step .n{font-family:var(--font-head);font-weight:800;color:var(--sky);font-size:14px}
+.step p{color:var(--muted);font-size:15px;margin-top:8px}
+.tools{margin-top:44px;color:var(--muted);font-size:15.5px}
+.tools b{color:var(--ink);font-weight:600}
+
+/* about + contact */
+.about{display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+.about img{width:210px;height:210px;object-fit:cover;border-radius:var(--radius);border:1px solid var(--line)}
+.about .txt{flex:1;min-width:260px}
+.about h2{text-wrap:balance;font-family:var(--font-head);font-weight:700;font-size:clamp(26px,3.6vw,34px);line-height:1.2}
+.about p{color:var(--muted);margin-top:12px;max-width:38em}
+.cta{background:var(--navy);color:var(--on-navy);border-radius:calc(var(--radius) + 6px);padding:48px;text-align:center}
+.cta h2{text-wrap:balance;font-family:var(--font-head);font-weight:700;font-size:clamp(26px,4vw,36px)}
+.cta p{color:var(--pale);margin:12px auto 24px;max-width:32em}
+
+footer{padding:44px 0 56px;color:var(--muted);font-size:14.5px}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--blue)}
+
+/* v32: restored content from the previous design */
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.hero-meta .hm{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:var(--on-navy);padding:8px 14px;border-radius:999px;font-size:14.5px}
+.hero-meta .hm img{width:20px;height:20px}
+.counters{background:var(--surface);border-bottom:1px solid var(--line);padding:36px 0}
+.counters .row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media(max-width:700px){.counters .row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.count{text-align:center}
+.count b{font-family:var(--font-head);font-weight:800;font-size:36px;color:var(--blue);display:block;line-height:1.1}
+.count span{color:var(--muted);font-size:14.5px}
+.reel-row{display:flex;gap:18px;overflow-x:auto;padding:4px 4px 14px;scroll-snap-type:x mandatory}
+.reel-item{min-width:238px;max-width:238px;scroll-snap-align:start}
+.reel-item img{width:100%;height:132px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.reel-item .cat{font-size:12.5px;color:var(--blue);font-weight:600;display:block;margin-top:10px}
+.reel-item h4{font-family:var(--font-head);font-size:16px;font-weight:700;margin-top:2px}
+.reel-item p{color:var(--muted);font-size:13.5px;margin-top:2px}
+.work-card .thumb img{width:100%;height:100%;object-fit:cover}
+.svc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media(max-width:960px){.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.svc-grid{grid-template-columns:minmax(0,1fr)}}
+.svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.svc img{width:52px;height:52px;object-fit:contain}
+.svc h3{font-family:var(--font-head);font-size:17px;font-weight:700;margin-top:12px;line-height:1.3}
+.svc p{color:var(--muted);font-size:14.5px;margin-top:6px}
+.exp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+@media(max-width:760px){.exp-grid{grid-template-columns:minmax(0,1fr)}}
+.exp-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.exp-card .top{display:flex;gap:14px;align-items:center}
+.exp-card .top img{width:44px;height:44px;object-fit:contain}
+.exp-card h3{font-family:var(--font-head);font-size:18px;font-weight:700}
+.exp-card .when{color:var(--blue);font-weight:600;font-size:13.5px}
+.exp-card p{color:var(--muted);font-size:15px;margin-top:10px}
+.cred{display:flex;gap:28px;flex-wrap:wrap;margin-top:36px;align-items:flex-start}
+.cred img.cert{width:320px;max-width:100%;border-radius:var(--radius);border:1px solid var(--line)}
+.cred .list{flex:1;min-width:260px;display:grid;gap:16px}
+.cred-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.cred-item h4{font-family:var(--font-head);font-size:16.5px;font-weight:700}
+.cred-item p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.skill{border:1px solid var(--line);background:var(--surface);padding:7px 13px;border-radius:999px;font-size:14px;font-weight:500}
+.cta .contacts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.cta .contact-chip{display:inline-flex;gap:9px;align-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:var(--on-navy);padding:10px 18px;border-radius:999px;font-size:15px}
+.cta .contact-chip img{width:20px;height:20px}
+
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .tilt{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="#top">SAGOR<span class="dot">.</span><small>Jarif Hasan, digital marketing</small></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#guides">Guides</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn" href="https://wa.me/8801604289859" target="_blank" rel="noopener">WhatsApp me</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div class="hero-inner">
+      <h1>I turn searches into <span class="hl">customers</span>.</h1>
+      <p class="sub">SEO, Meta ads and WordPress websites for businesses in Bangladesh and beyond.</p>
+      <div class="actions">
+        <a class="btn" href="#matcher">Tell me what you need</a>
+        <a class="btn ghost" href="#work">See selected work</a>
+      </div>
+      <div class="hero-meta">
+        <span class="hm"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1KvFkgUhh09-3G2-Bz0gSNPWS0VuhRUrs7f6LVL7FrO7V3LUvbLySLWNX592LGzkIBM-gAJldIum0-nNQIDTz205nyewgf_v2qX-3llww32HpulD8lig-4lFt55JydHXN8Xvei_54xa5MsP4U7i86noXIs1gJkuwcv6f3G8BZyY7LKspoutaOxdkNKsG9/s192/v26-icon-location.png" alt=""> Gazipur, Dhaka, Bangladesh</span>
+        <a class="hm" href="mailto:JarifHasanSagor72@gmail.com"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_eiHHywbneTvTjWoHroIbu_gCPkjMAB8-O2MvPIOrv63ZmLaZ66_12hZZqUfhIMECAiqK-EEpEY1SWyPIF6nAYSF1XVldqp-OOuMXn48TVnhAkHHg5GA_xUXLTCqDDoHHtB7OyJKfAVaqhol7guIF-GLnGNwNGgRJRK1Q7MH263-iQ6565rA75FPQTYLL/s192/v26-icon-email.png" alt=""> JarifHasanSagor72@gmail.com</a>
+        <a class="hm" href="https://wa.me/8801604289859" target="_blank" rel="noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2mn_TxynXLtpDB13dv-0MB5KBWi6e4ePx8b3N2J0GbeMmyuMYLgZiRD7KaWR0A1Lt4xL-4E8Pb06lDVzNtPGYuTKrNz1iFOqqxkq2qT22CT7OMN6tXWex4XrdHl0bPLAQSgOK37MotxA2cuoFLyraR_bL3YljGeoBYlgYwcUVuVbRXhxbllWgyKuAMYOX/s192/v26-icon-whatsapp.png" alt=""> WhatsApp me</a>
+      </div>
+
+    </div>
+    <div class="matcher" id="matcher">
+      <h2>Tell me what you need</h2>
+      <p>Describe a problem, name a service, or ask a question, and I will show you the closest answer from my work.</p>
+      <form id="matchForm">
+        <input id="matchInput" type="text" placeholder="e.g. my website gets no traffic from Google" aria-label="Describe what you need">
+        <button class="btn" type="submit">Show me</button>
+      </form>
+      <div class="chips">
+        <button class="chip" type="button">My website gets no traffic</button>
+        <button class="chip" type="button">Facebook ads not converting</button>
+        <button class="chip" type="button">I need a new website</button>
+        <button class="chip" type="button">More local customers please</button>
+        <button class="chip" type="button">Grow my YouTube channel</button>
+      </div>
+      <div class="match-result" id="matchResult" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<div class="counters">
+  <div class="wrap row">
+    <div class="count"><b data-count="8">8</b><span>Services Offered</span></div>
+    <div class="count"><b data-count="6">6</b><span>Projects Built</span></div>
+    <div class="count"><b data-count="19">19</b><span>Published Articles</span></div>
+    <div class="count"><b data-count="2">2</b><span>Certifications</span></div>
+  </div>
+</div>
+
+<section id="showreel" style="padding:56px 0 8px">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:24px">
+      <h2>Showreel</h2>
+      <p>Selected work at a glance — the projects below, in pictures.</p>
+    </div>
+    <div class="reel-row">
+      <div class="reel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTdgKg5rLWD-DfT9RuuqPE24Q7MDyOA_Ww31_jLeJ2gu3QGtCfM4U4WcXxJF8dcF-y5DlMPnodf0dsROxdqnwhsJkhAh3M-Y9IkXf0En89figftdiaR2Ovgz4w9hJoAEy2mvxlzMIIc2F8hyphenhyphen28CRkOiWgVSjtTZLLsEBJzG38ffbnbrdg_bRsUSgCKXSZG/s1200/v26-work-dental.jpg" alt="Screenshot of the Dental View demo website built for a dental clinic in Banani"><span class="cat">Web Design</span><h4>Business Demo Websites</h4><p>Demo sites for restaurants & dental clinics</p></div>
+      <div class="reel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUUad8DeCzv-LGV6EtG4Kp32cx9gk8W_h0mvsTTDqScmCe2rSsDqMpimZvsMoZsVu3Kwp-tRttlQELn4HJlD1cijFjnBS7ihU50_eePcPHS_zCy9Y5cvrxzZJiKQ2BOBoRRdjvNqoWOBotyAkZUtzqTKaDVWQNY1ViPDV30CqkFDygFVJRp5JWOTS94TP7/s1200/v26-work-jhsdgm.jpg" alt="Screenshot of the JHSDGM website homepage"><span class="cat">Blog & Portfolio</span><h4>JHSDGM</h4><p>Articles and guides on SEO and ads</p></div>
+      <div class="reel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhT6dXRt2d_uaNtM1PIiXZyjiMz5XXqMS5q77RVKOApbCyiJtIehWBJvIJZsVjHnpo8S3N-C5YcQOSDVcHeMFc7g-ZdziDnjYVrthUN34XrY4SExeeSwfyocy2JH8UGpqTLmJipwc5eU-RAGEEph06SyRy2pyAuqySYgxrOy-nCmsu9nGbdazpYnZEe1vbb/s1200/v26-work-dekhoflix.jpg" alt="Screenshot of the DekhoFlix streaming website welcome screen"><span class="cat">Streaming Website</span><h4>DekhoFlix</h4><p>Movie and web-series streaming website</p></div>
+      <div class="reel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioNmbgPXVwy0G47IHyH5iq7cFnyl6gbPevc1HdqTGmrZQ8OHLe453NP8g1jfFsgNG0xVbEd6PVIT-IoxAUrBMI66b2je1jOxwDUN9-giViVDwh7euswc55t7d7gQRNxIXfUpbBRNOlPb7S0RnmiBZCAVn1Mb77Bp8p37odOmuy_H9NY8U6obvJ3wO8AS1G/s1200/v26-work-sil.jpg" alt="Screenshot of the Smart Income Lab YouTube channel page"><span class="cat">YouTube Channel</span><h4>Smart Income Lab</h4><p>AI tools and online income videos</p></div>
+      <div class="reel-item"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiOld4Tgrb3wee2mYp63j4sVmVVjpkUbYy-Eiw9_fiyEnqnQJ-v7bpvJk-t3Tu10msVtUSLqZ2WOnivyLZjd3m04WMdOeW4BD0s01aEhRZrddLb02_e9LdmJvVJMm_z8n3vnfYt9BF49kb6KwjDxxk8WnawTxJUGE9jR0Gy4U5_Ds_J4kgzKfdLckbSix9/s1200/v26-work-pgn.jpg" alt="Screenshot of the Pro Gaming News YouTube channel page"><span class="cat">YouTube Channel</span><h4>Pro Gaming News</h4><p>Gaming event news and coverage</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p>Websites, apps and demos I have designed, built and shipped myself.</p>
+    </div>
+    <div class="grid">
+      <article class="work-card tilt">
+        <div class="thumb"><img src="https://dilmohammadsagor92.github.io/etera-perfume-3d-demo/card.jpg" alt="ÉTERA 3D perfume website demo"></div>
+        <div class="body">
+          <span class="cat">3D web experience</span>
+          <h3>ÉTERA: 3D Perfume Website</h3>
+          <p>A scroll-driven 3D product experience: a perfume bottle you can turn, recolour and explore in the browser.</p>
+          <p class="stack">Three.js and WebGL</p>
+          <a class="visit" href="https://dilmohammadsagor92.github.io/etera-perfume-3d-demo/" target="_blank" rel="noopener">Visit the live demo</a>
+        </div>
+      </article>
+      <article class="work-card tilt">
+        <div class="thumb"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhT6dXRt2d_uaNtM1PIiXZyjiMz5XXqMS5q77RVKOApbCyiJtIehWBJvIJZsVjHnpo8S3N-C5YcQOSDVcHeMFc7g-ZdziDnjYVrthUN34XrY4SExeeSwfyocy2JH8UGpqTLmJipwc5eU-RAGEEph06SyRy2pyAuqySYgxrOy-nCmsu9nGbdazpYnZEe1vbb/s1200/v26-work-dekhoflix.jpg" alt="Screenshot of the DekhoFlix streaming website welcome screen"></div>
+        <div class="body">
+          <span class="cat">Streaming website</span>
+          <h3>DekhoFlix</h3>
+          <p>A movie and web-series streaming site with hundreds of titles, built and maintained end to end by me.</p>
+          <p class="stack">Firebase and JavaScript</p>
+          <a class="visit" href="https://dekhoflix.web.app" target="_blank" rel="noopener">Visit the live site</a>
+        </div>
+      </article>
+      <article class="work-card tilt">
+        <div class="thumb"><img src="topup.jpg" alt="Screenshot of the JHS Gaming Topup storefront"></div>
+        <div class="body">
+          <span class="cat">Marketplace</span>
+          <h3>JHS Gaming Topup</h3>
+          <p>A game top-up storefront with a clean catalogue, fast pages and a checkout flow designed for mobile buyers.</p>
+          <p class="stack">Firebase and JavaScript</p>
+          <a class="visit" href="https://jhs-gaming-topup.web.app" target="_blank" rel="noopener">Visit the live site</a>
+        </div>
+      </article>
+      <article class="work-card tilt">
+        <div class="thumb"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhTdgKg5rLWD-DfT9RuuqPE24Q7MDyOA_Ww31_jLeJ2gu3QGtCfM4U4WcXxJF8dcF-y5DlMPnodf0dsROxdqnwhsJkhAh3M-Y9IkXf0En89figftdiaR2Ovgz4w9hJoAEy2mvxlzMIIc2F8hyphenhyphen28CRkOiWgVSjtTZLLsEBJzG38ffbnbrdg_bRsUSgCKXSZG/s1200/v26-work-dental.jpg" alt="Screenshot of a demo website built for a dental clinic"></div>
+        <div class="body">
+          <span class="cat">Client demos</span>
+          <h3>Demo Websites for Local Businesses</h3>
+          <p>Demo websites built for restaurants, dental clinics and local businesses across the USA and UK.</p>
+          <p class="stack">HTML, CSS and JavaScript</p>
+          <a class="visit" href="https://usuk-client-demos-jarif-hasan-sagor.vercel.app" target="_blank" rel="noopener">Browse the demos</a>
+        </div>
+      </article>
+      <article class="work-card tilt">
+        <div class="thumb"><img src="kota.jpg" alt="Screenshot of the JH Kota chat app"></div>
+        <div class="body">
+          <span class="cat">Chat app</span>
+          <h3>JH Kota</h3>
+          <p>A messaging app with one-to-one and group chat, voice and video calls, status updates and guest join links.</p>
+          <p class="stack">Flutter and WebRTC</p>
+          <a class="visit" href="https://dilmohammadsagor92.github.io/jh-kota-web/" target="_blank" rel="noopener">Open the web app</a>
+        </div>
+      </article>
+      <article class="work-card tilt">
+        <div class="thumb"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUUad8DeCzv-LGV6EtG4Kp32cx9gk8W_h0mvsTTDqScmCe2rSsDqMpimZvsMoZsVu3Kwp-tRttlQELn4HJlD1cijFjnBS7ihU50_eePcPHS_zCy9Y5cvrxzZJiKQ2BOBoRRdjvNqoWOBotyAkZUtzqTKaDVWQNY1ViPDV30CqkFDygFVJRp5JWOTS94TP7/s1200/v26-work-jhsdgm.jpg" alt="Screenshot of the JHSDGM website homepage"></div>
+        <div class="body">
+          <span class="cat">Portfolio</span>
+          <h3>JHSDGM Portfolio</h3>
+          <p>This website: a portfolio and guide library built to rank on Google and answer engines alike.</p>
+          <p class="stack">Blogger and Netlify</p>
+          <a class="visit" href="https://jhsdgm.blogspot.com" target="_blank" rel="noopener">Visit the live site</a>
+        </div>
+      </article>
+      <article class="work-card tilt">
+        <div class="thumb"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEioNmbgPXVwy0G47IHyH5iq7cFnyl6gbPevc1HdqTGmrZQ8OHLe453NP8g1jfFsgNG0xVbEd6PVIT-IoxAUrBMI66b2je1jOxwDUN9-giViVDwh7euswc55t7d7gQRNxIXfUpbBRNOlPb7S0RnmiBZCAVn1Mb77Bp8p37odOmuy_H9NY8U6obvJ3wO8AS1G/s1200/v26-work-sil.jpg" alt="Screenshot of the Smart Income Lab YouTube channel page"></div>
+        <div class="body">
+          <span class="cat">YouTube channel</span>
+          <h3>Smart Income Lab</h3>
+          <p>A faceless YouTube channel about AI tools and online income, with documentary-style videos and Shorts published on a regular schedule.</p>
+          <p class="stack">Motion graphics and Shorts</p>
+          <a class="visit" href="https://www.youtube.com/@SmartIncome_Lab" target="_blank" rel="noopener">Visit the channel</a>
+        </div>
+      </article>
+      <article class="work-card tilt">
+        <div class="thumb"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiOld4Tgrb3wee2mYp63j4sVmVVjpkUbYy-Eiw9_fiyEnqnQJ-v7bpvJk-t3Tu10msVtUSLqZ2WOnivyLZjd3m04WMdOeW4BD0s01aEhRZrddLb02_e9LdmJvVJMm_z8n3vnfYt9BF49kb6KwjDxxk8WnawTxJUGE9jR0Gy4U5_Ds_J4kgzKfdLckbSix9/s1200/v26-work-pgn.jpg" alt="Screenshot of the Pro Gaming News YouTube channel page"></div>
+        <div class="body">
+          <span class="cat">YouTube channel</span>
+          <h3>Pro Gaming News</h3>
+          <p>A YouTube channel covering gaming events and esports news, with edited news videos produced in a fast, visual style.</p>
+          <p class="stack">Video editing and SEO</p>
+          <a class="visit" href="https://www.youtube.com/@ProGamingNewsHQ" target="_blank" rel="noopener">Visit the channel</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Six useful starting points</h2>
+      <p>Start with the problem in front of you. We can decide which piece of work makes sense after that.</p>
+    </div>
+    <div class="starts">
+      <div class="start reveal">
+        <span class="num">01</span>
+        <div>
+          <h3><a href="https://jhsdgm.blogspot.com/2026/10/seo-specialist-in-dhaka-how-i-rank.html">Rank higher on Google</a></h3>
+          <p>Technical audits, keyword research and content that climbs the results and stays there.</p>
+        </div>
+      </div>
+      <div class="start reveal">
+        <span class="num">02</span>
+        <div>
+          <h3><a href="https://jhsdgm.blogspot.com/2026/10/facebook-ads-expert-bangladesh.html">Ads that bring buyers</a></h3>
+          <p>Facebook and Instagram campaigns with pixel tracking, tested audiences and honest reporting.</p>
+        </div>
+      </div>
+      <div class="start reveal">
+        <span class="num">03</span>
+        <div>
+          <h3><a href="https://jhsdgm.blogspot.com/2026/11/wordpress-website-designer.html">A website that sells</a></h3>
+          <p>Fast WordPress websites designed around one job: turning visitors into enquiries.</p>
+        </div>
+      </div>
+      <div class="start reveal">
+        <span class="num">04</span>
+        <div>
+          <h3><a href="https://jhsdgm.blogspot.com/2026/11/google-business-profile-optimization.html">Show up in local search</a></h3>
+          <p>Google Business Profile and local SEO so nearby customers find you first, on Maps and in search.</p>
+        </div>
+      </div>
+      <div class="start reveal">
+        <span class="num">05</span>
+        <div>
+          <h3><a href="https://jhsdgm.blogspot.com/2026/11/social-media-manager-services.html">Social media, handled</a></h3>
+          <p>Planned posts, consistent branding and monthly reporting for your Facebook and Instagram pages.</p>
+        </div>
+      </div>
+      <div class="start reveal">
+        <span class="num">06</span>
+        <div>
+          <h3><a href="https://jhsdgm.blogspot.com/#services">Grow on YouTube</a></h3>
+          <p>Titles, thumbnails and descriptions built for clicks and watch time, plus channel SEO that compounds.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services-full" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Everything a business needs to grow online</h2>
+      <p>Eight focused services — pick one, or combine them into a complete growth package.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFVpI8JmX2tPHrGUTvq1j5uw7I9_ixt7dGcsQ17J4zfeJBP2c8CPedY0YwVEI0wWUitfyVYxWL0T5Ez546ApeQ_eqnpMA062LCfpfA5BKKCu8ncLYAR39Z4AR1eqrUQd2rnVuVWLDER84smAQwtrws16cz4IyOgFa4lzLHlu0Gc1f2twZn38aDamN_FEl0/s192/v26-icon-search.png" alt="SEO icon"><h3>SEO</h3><p>Search engine optimization that gets your business found on Google — audits, keywords and on-page fixes.</p></div>
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivhIxB-Oa9nO8PIs9F4IQkqDbk2U2IJmoFhKbm63VWu3F3738e2GRDoWkip9GpfGTnSuOHcwiQCpHutxSwWjs7xdjj0vKHRNeZtMtOGUKMqho6CPA-FldT8B7IcUtb6LLmq-6i6ZF5ehSMFDxkKMnnIJkAZI994Bno-UwTo-1-I01IAt1aUdFr-yLBFtJf/s192/v26-icon-chat.png" alt="Meta Ads icon"><h3>Meta Ads</h3><p>Facebook and Instagram advertising with pixel tracking, targeted audiences and clear reporting.</p></div>
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1Y0PgBzolbxxZy_fD72FZ77XiWorPZRIUgIT_J8oed8WYxnsiPAFtKTF-3wHl2SuC7B_y9qygo4HdAGZ2O6w2AcOsISTW2DC0SYgt_TgAdkc9qaawa5bSL5O-Mdzlzco5DZCr4vMSJWz2iGONeDekkoEf_uAaLDAgBZCdvCvw69b7juPyHJtNDXtrB1f_/s192/v26-icon-target.png" alt="Google Ads icon"><h3>Google Ads</h3><p>Search and display campaigns that put your offer in front of people already looking to buy.</p></div>
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYdMu2d1HMp3MouWQufWBE9AH4EOOUWxKiWQrUqMzdh768pwYK330LGFkIjZAKDb445CxKNQe3EMYq3td8XKW5YZBjEUKhDH_Hc8j9IMMyln1qXwNdmJc5GSb8qZdPLGJTryUJVE9KfbbrG-ZyX3XSw3fJ_NkxnVWMqgUqtizYXSe1GOj7VSO-YsccDgDU/s192/v26-icon-people.png" alt="Social Media Marketing icon"><h3>Social Media Marketing</h3><p>Content planning and page management that keeps your brand active and your audience growing.</p></div>
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMaFHyA0gyW_7GUUsot1fGN8URcEfXSNAl6YVEKWSXXa5loRSRdJudFNaya_vHpTnftNY-e9SJQSGl5w2_FROKt9FOhRbyUCafGTDMFskD_QLfpmPxVVNUB6VEejJawfr3BsQrRgicMr67amYtuK-yxHsHG85GapuuUkLcJHJoXTNHY-_xLDfzJalZxRhW/s192/v26-icon-wordpress.png" alt="WordPress Website Design icon"><h3>WordPress Website Design</h3><p>Fast, mobile-friendly WordPress websites designed to turn visitors into enquiries and sales.</p></div>
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjobzSmzrTBKX9VbCBYV6gBk94vke0SxMU02qR16lXMAUSm09UTE5GwM0NwfVqoRcTqeanYZwp49RwZy_IPRz9fBdjErUcECvon_v8_5terkerFaA0LlU_gLHNrKEqyMg0u0xZeXJjene9pZn2tIaYSFNqimHp2kGe61BDEGeszljRzCjfPISBjwLgy8Wa5/s192/v26-icon-list.png" alt="Content Marketing icon"><h3>Content Marketing</h3><p>Blog articles and content planned around the searches your customers actually make.</p></div>
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_eiHHywbneTvTjWoHroIbu_gCPkjMAB8-O2MvPIOrv63ZmLaZ66_12hZZqUfhIMECAiqK-EEpEY1SWyPIF6nAYSF1XVldqp-OOuMXn48TVnhAkHHg5GA_xUXLTCqDDoHHtB7OyJKfAVaqhol7guIF-GLnGNwNGgRJRK1Q7MH263-iQ6565rA75FPQTYLL/s192/v26-icon-email.png" alt="Email Marketing icon"><h3>Email Marketing</h3><p>Email campaigns and newsletters that bring past customers back and keep new ones engaged.</p></div>
+      <div class="svc reveal"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsZ0Ho33EZNTyQoeQC9frL8GnHCFY8mGqZAm-nymlD5DVcLuy6RE9Ef_g1fRxTfce4zDdQaNKxRjHnCc3BDTmxUj34YSgQDx_EJ8IdUqARlp0a3YepIuGwxb2Hqb9bcqhg4KyMFEq_Kb-MKNfSAHK3Ov3rkM2RMHIMkoqepQGgyuI_aqLoiHk2_kuSIunc/s192/v26-icon-youtube.png" alt="YouTube Marketing & SEO icon"><h3>YouTube Marketing & SEO</h3><p>Channel optimization, titles, tags and thumbnails strategy that help videos get discovered.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="guides" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Guides from the blog</h2>
+      <p>Nineteen in-depth guides on SEO, ads and websites, written from practice.</p>
+    </div>
+    <div class="guides">
+      <article class="guide reveal">
+        <span class="cat">Digital marketing</span>
+        <h3><a href="https://jhsdgm.blogspot.com/2026/10/digital-marketing-expert-in-bangladesh.html">Digital Marketing Expert in Bangladesh: Skills, Services &amp; How to Hire</a></h3>
+        <p>What a digital marketing expert actually does, and how to choose the right one for your business.</p>
+      </article>
+      <article class="guide reveal">
+        <span class="cat">Organic search</span>
+        <h3><a href="https://jhsdgm.blogspot.com/2026/11/seo-checklist-for-new-website-2026.html">SEO Checklist for a New Website (2026)</a></h3>
+        <p>The full launch checklist: technical setup, content, indexing and the mistakes that quietly block ranking.</p>
+      </article>
+      <article class="guide reveal">
+        <span class="cat">Web design</span>
+        <h3><a href="https://jhsdgm.blogspot.com/2026/11/wordpress-website-designer.html">WordPress Website Designer: What a Good Designer Does &amp; How to Hire One</a></h3>
+        <p>What separates a designer who builds pretty pages from one who builds pages that bring customers.</p>
+      </article>
+      <article class="guide reveal">
+        <span class="cat">Paid ads</span>
+        <h3><a href="https://jhsdgm.blogspot.com/2026/10/facebook-vs-google-ads-bangladesh.html">Facebook Ads vs Google Ads in Bangladesh: Which Should Your Business Run?</a></h3>
+        <p>An honest comparison of cost, intent and speed, plus where your first taka should go.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How working with me goes</h2>
+      <p>No retainers you cannot follow and no reports you cannot read. Four clear steps.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><span class="n">Step 1</span><h3>Free audit</h3><p>I look at your site, ads or profiles and tell you plainly what is working and what is not.</p></div>
+      <div class="step reveal"><span class="n">Step 2</span><h3>Plan and price</h3><p>You get a short plan with a fixed, affordable price before any work starts. No surprises later.</p></div>
+      <div class="step reveal"><span class="n">Step 3</span><h3>Build and launch</h3><p>The work ships in days, not months, and you see it live before it counts as done.</p></div>
+      <div class="step reveal"><span class="n">Step 4</span><h3>Measure and improve</h3><p>Simple reports show what changed, and the next round of work follows the numbers.</p></div>
+    </div>
+    <p class="tools"><b>Tools I work in:</b> Google Ads, Meta Ads Manager, WordPress, Google Search Console, Google Analytics and Canva</p>
+  </div>
+</section>
+
+<section id="experience" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Where I have worked</h2>
+      <p>Experience and training behind the services above.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <div class="top"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKELglB-5QPyMn-X3dMXsJgTUHgSC9sL5SAF8vEFbt9EXdxroKuvrOkK9FbzE7t-D5wEz-XuVUqUkmHMkTpgmMz8Hstv-GpiDDuId9RbHZ7ApksHUIDnaNYDEMtvhKVoSBqAljPpJsDrTfXzNY14JH4WFMEgE3XSPRum59i3z_KTnnDVbuPMB7uYKrchVL/s192/v26-icon-briefcase.png" alt=""><div><h3>Freelance Digital Marketer</h3><span class="when">2024 — Present</span></div></div>
+        <p>SEO, Meta Ads and WordPress services for clients through freelance marketplaces and direct projects — including demo websites and outreach campaigns for local restaurants and dental clinics near Dhaka.</p>
+      </div>
+      <div class="exp-card reveal">
+        <div class="top"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYdMu2d1HMp3MouWQufWBE9AH4EOOUWxKiWQrUqMzdh768pwYK330LGFkIjZAKDb445CxKNQe3EMYq3td8XKW5YZBjEUKhDH_Hc8j9IMMyln1qXwNdmJc5GSb8qZdPLGJTryUJVE9KfbbrG-ZyX3XSw3fJ_NkxnVWMqgUqtizYXSe1GOj7VSO-YsccDgDU/s192/v26-icon-people.png" alt=""><div><h3>Social Media Marketing Manager</h3><span class="when">Ongoing</span></div></div>
+        <p>Running content and growth for my own channels and pages — the Smart Income Lab and Pro Gaming News YouTube channels, plus the JHSDGM blog and social profiles.</p>
+      </div>
+    </div>
+    <div class="cred">
+      <img class="cert" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhfnm74NVvt-uNFPOToHJHYoHmU4NyFqQht_p7dPWXhl1gSSUPtwKou-jcRcruCUf6IT2zdPSLYXcKrbV-HVpDQmB5Lnh1VZTGTfOspMai3wty5r5hl-lr_i5xvCaGrMhuJ3QXkNZUWzB-HUoEyezmRAmHrZEihwXaYka-jgFI3RtRCrAMHhd3tY4eqWbgr/s1600/v26-certificate.jpg" alt="Professional Digital Marketing certificate from Creative IT Institute">
+      <div class="list">
+        <div class="cred-item"><h4>Professional Digital Marketing — Creative IT Institute</h4><p>Grade A, 2024 · Certificate ID DM-23127020</p></div>
+        <div class="cred-item"><h4>Certificate in Computer Application</h4><p>Formal training in computer applications and office productivity tools.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <img src="about.jpg" alt="Portrait of Jarif Hasan Sagor">
+    <div class="txt">
+      <h2>Jarif Hasan Sagor, digital marketing expert</h2>
+      <p>I am Jarif Hasan Sagor, a certified digital marketer based in Gazipur, Dhaka. I completed my Professional Digital Marketing training at Creative IT Institute with Grade A in 2024, and I now help businesses get found on Google, reach customers on social media, and turn traffic into enquiries. My work covers the full funnel — SEO audits and keyword strategy, Meta and Google ad campaigns, WordPress websites, content, email and YouTube growth — all reported in plain language so you always know what your budget is doing.</p>
+      <div class="skills"><span class="skill">SEO</span><span class="skill">Meta Ads</span><span class="skill">Google Ads</span><span class="skill">WordPress</span><span class="skill">Social Media Marketing</span><span class="skill">Content Marketing</span><span class="skill">Email Marketing</span><span class="skill">YouTube SEO</span><span class="skill">Google Analytics</span><span class="skill">Keyword Research</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta">
+      <h2>Have a problem worth fixing?</h2>
+      <p>Message me on WhatsApp with one line about your business, and I will reply with a free audit and a clear next step.</p>
+      <a class="btn" href="https://wa.me/8801604289859" target="_blank" rel="noopener">Start on WhatsApp</a>
+      <div class="contacts">
+        <a class="contact-chip" href="https://wa.me/8801604289859" target="_blank" rel="noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2mn_TxynXLtpDB13dv-0MB5KBWi6e4ePx8b3N2J0GbeMmyuMYLgZiRD7KaWR0A1Lt4xL-4E8Pb06lDVzNtPGYuTKrNz1iFOqqxkq2qT22CT7OMN6tXWex4XrdHl0bPLAQSgOK37MotxA2cuoFLyraR_bL3YljGeoBYlgYwcUVuVbRXhxbllWgyKuAMYOX/s192/v26-icon-whatsapp.png" alt=""> +880 1604-289859</a>
+        <a class="contact-chip" href="mailto:JarifHasanSagor72@gmail.com"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh_eiHHywbneTvTjWoHroIbu_gCPkjMAB8-O2MvPIOrv63ZmLaZ66_12hZZqUfhIMECAiqK-EEpEY1SWyPIF6nAYSF1XVldqp-OOuMXn48TVnhAkHHg5GA_xUXLTCqDDoHHtB7OyJKfAVaqhol7guIF-GLnGNwNGgRJRK1Q7MH263-iQ6565rA75FPQTYLL/s192/v26-icon-email.png" alt=""> JarifHasanSagor72@gmail.com</a>
+        <a class="contact-chip" href="https://www.linkedin.com/in/jarif-hassan-sagor-/" target="_blank" rel="noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8zNvcYexy9InBndBJ9kpJaeD56yXNUxOSBjseRvlo5j9XTfY8Nf557ld_blB4rNpcWbDhX1iMSZZxApnXt8rsRY75q7kV1uHIk37q55vVN08t0tpE1-IWK6TFuW_LzgSuLhfE0H6UJWGL7RMW-nhWTzOK4t5d2rakoChXkbl4RtKzm4ChKLExKyw3tMF7/s192/v26-icon-linkedin.png" alt=""> Connect on LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Jarif Hasan Sagor, Gazipur, Dhaka, Bangladesh. Remote-first.</span>
+    <span><a href="https://www.linkedin.com/in/jarif-hassan-sagor-/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;&nbsp; <a href="https://jhsdgm.blogspot.com">Blog</a> &nbsp;&nbsp; <a href="mailto:JarifHasanSagor72@gmail.com">Email</a></span>
+  </div>
+</footer>
+
+<script src="three.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- WebGL particle globe (hero) ---------- */
+  var canvas = document.getElementById("gl");
+  if (window.THREE && canvas) {
+    try {
+      var renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: true, antialias: true});
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+      camera.position.set(0, 0, 7.2);
+
+      var group = new THREE.Group();
+      scene.add(group);
+
+      // points on a sphere (fibonacci distribution)
+      var N = window.innerWidth < 700 ? 550 : 1100, R = 2.15;
+      var pos = new Float32Array(N * 3);
+      var col = new Float32Array(N * 3);
+      var cBlue = new THREE.Color(0x42A5F5), cDeep = new THREE.Color(0x1565C0),
+          cGreen = new THREE.Color(0x66BB6A), tmp = new THREE.Color();
+      var pts = [];
+      for (var i = 0; i < N; i++) {
+        var y = 1 - (i / (N - 1)) * 2, rad = Math.sqrt(Math.max(0, 1 - y * y));
+        var th = i * 2.399963;
+        var v = new THREE.Vector3(Math.cos(th) * rad * R, y * R, Math.sin(th) * rad * R);
+        pts.push(v);
+        pos[i*3] = v.x; pos[i*3+1] = v.y; pos[i*3+2] = v.z;
+        tmp.copy(Math.random() < 0.08 ? cGreen : (Math.random() < 0.5 ? cBlue : cDeep));
+        col[i*3] = tmp.r; col[i*3+1] = tmp.g; col[i*3+2] = tmp.b;
+      }
+      var pg = new THREE.BufferGeometry();
+      pg.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+      pg.setAttribute("color", new THREE.BufferAttribute(col, 3));
+      group.add(new THREE.Points(pg, new THREE.PointsMaterial({size: 0.045, vertexColors: true, transparent: true, opacity: 0.95})));
+
+      // sparse connecting lines between near neighbours
+      var lp = [];
+      for (var a = 0; a < N; a += 3) {
+        for (var b = a + 1; b < Math.min(N, a + 26); b++) {
+          if (pts[a].distanceTo(pts[b]) < 0.52) { lp.push(pts[a].x, pts[a].y, pts[a].z, pts[b].x, pts[b].y, pts[b].z); }
+        }
+      }
+      var lg = new THREE.BufferGeometry();
+      lg.setAttribute("position", new THREE.BufferAttribute(new Float32Array(lp), 3));
+      group.add(new THREE.LineSegments(lg, new THREE.LineBasicMaterial({color: 0x42A5F5, transparent: true, opacity: 0.16})));
+
+      // wireframe icosahedron accent
+      var ico = new THREE.Mesh(
+        new THREE.IcosahedronGeometry(0.55, 0),
+        new THREE.MeshBasicMaterial({color: 0x42A5F5, wireframe: true, transparent: true, opacity: 0.35})
+      );
+      ico.position.set(-4.9, 2.5, -1.2);
+      scene.add(ico);
+      var ring = new THREE.Mesh(
+        new THREE.TorusGeometry(0.42, 0.012, 8, 64),
+        new THREE.MeshBasicMaterial({color: 0x66BB6A, transparent: true, opacity: 0.55})
+      );
+      ring.position.set(3.6, -1.7, -0.4);
+      ring.rotation.x = 1.1;
+      scene.add(ring);
+
+      var mx = 0, my = 0;
+      document.addEventListener("pointermove", function(e){
+        mx = (e.clientX / window.innerWidth - 0.5) * 2;
+        my = (e.clientY / window.innerHeight - 0.5) * 2;
+      }, {passive: true});
+
+      function size(){
+        var w = canvas.clientWidth || canvas.parentElement.clientWidth;
+        var h = canvas.clientHeight || canvas.parentElement.clientHeight;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        group.position.x = window.innerWidth > 900 ? 2.4 : 0;
+        group.position.y = window.innerWidth > 900 ? 0.1 : 1.15;
+        var s = window.innerWidth > 900 ? 1 : 0.72;
+        group.scale.set(s, s, s);
+      }
+      size();
+      window.addEventListener("resize", size);
+
+      var t = 0;
+      function frame(){
+        t += 0.0035;
+        group.rotation.y = t + mx * 0.35;
+        group.rotation.x = my * 0.22 + Math.sin(t * 0.6) * 0.05;
+        ico.rotation.y -= 0.004; ico.rotation.x += 0.002;
+        ring.rotation.z += 0.003;
+        renderer.render(scene, camera);
+        if (!reduced) requestAnimationFrame(frame);
+      }
+      frame();
+    } catch (e) { /* WebGL unavailable: hero keeps its navy background */ }
+  }
+
+  /* ---------- "Tell me what you need" matcher ---------- */
+  var ANSWERS = [
+    {keys: ["traffic","rank","google search","seo","visitor","found on google","not ranking"],
+     title: "Rank higher on Google (SEO)", text: "Audits, keywords and content that climb the results.",
+     url: "https://jhsdgm.blogspot.com/2026/10/seo-specialist-in-dhaka-how-i-rank.html", go: "Read the SEO guide"},
+    {keys: ["facebook ad","instagram ad","meta ad","ads don't","ads dont","advertis","boost post","campaign"],
+     title: "Ads that bring buyers (Meta Ads)", text: "Campaigns with pixel tracking and tested audiences.",
+     url: "https://jhsdgm.blogspot.com/2026/10/facebook-ads-expert-bangladesh.html", go: "Read the ads guide"},
+    {keys: ["website","web site","wordpress","landing page","online shop","store","redesign"],
+     title: "A website that sells (WordPress)", text: "Fast WordPress sites built to turn visitors into enquiries.",
+     url: "https://jhsdgm.blogspot.com/2026/11/wordpress-website-designer.html", go: "Read the web design guide"},
+    {keys: ["local","map","near me","shop","restaurant","clinic","google business","gmb","customers nearby"],
+     title: "Show up in local search", text: "Google Business Profile and local SEO for nearby customers.",
+     url: "https://jhsdgm.blogspot.com/2026/11/google-business-profile-optimization.html", go: "Read the local SEO guide"},
+    {keys: ["social media","facebook page","instagram page","posts","content calendar","manage my page"],
+     title: "Social media, handled", text: "Planned posts, consistent branding and monthly reporting.",
+     url: "https://jhsdgm.blogspot.com/2026/11/social-media-manager-services.html", go: "Read the SMM guide"},
+    {keys: ["youtube","video","channel","subscribers","views"],
+     title: "Grow on YouTube", text: "Titles, thumbnails and channel SEO built for clicks and watch time.",
+     url: "https://jhsdgm.blogspot.com/#services", go: "See the service"}
+  ];
+  var FALLBACK = {title: "Start with a free audit", text: "Tell me about your business on WhatsApp and I will point you to the right first step.",
+     url: "https://wa.me/8801604289859", go: "Message me on WhatsApp"};
+  var form = document.getElementById("matchForm");
+  var input = document.getElementById("matchInput");
+  var result = document.getElementById("matchResult");
+  function answer(q){
+    var s = (q || "").toLowerCase(), hits = [];
+    ANSWERS.forEach(function(a){
+      var score = 0;
+      a.keys.forEach(function(k){ if (s.indexOf(k) !== -1) score += k.length; });
+      if (score) hits.push({a: a, score: score});
+    });
+    hits.sort(function(x, y){ return y.score - x.score; });
+    var list = hits.slice(0, 2).map(function(h){ return h.a; });
+    if (!list.length) list = [FALLBACK];
+    result.innerHTML = list.map(function(a){
+      return '<div class="card-link"><div><b>' + a.title + '</b><span>' + a.text + '</span></div>' +
+             '<a class="go" href="' + a.url + '">' + a.go + '</a></div>';
+    }).join("");
+    result.classList.add("show");
+  }
+  if (form) form.addEventListener("submit", function(e){ e.preventDefault(); answer(input.value); });
+  Array.prototype.forEach.call(document.querySelectorAll(".chip"), function(chip){
+    chip.addEventListener("click", function(){ input.value = chip.textContent.trim(); answer(chip.textContent); });
+  });
+
+  /* ---------- card tilt + generative thumbs ---------- */
+  if (!reduced && window.matchMedia("(hover:hover)").matches) {
+    Array.prototype.forEach.call(document.querySelectorAll(".tilt"), function(card){
+      card.addEventListener("pointermove", function(e){
+        var r = card.getBoundingClientRect();
+        var rx = ((e.clientY - r.top) / r.height - 0.5) * -7;
+        var ry = ((e.clientX - r.left) / r.width - 0.5) * 9;
+        card.style.transform = "perspective(900px) rotateX(" + rx + "deg) rotateY(" + ry + "deg)";
+      });
+      card.addEventListener("pointerleave", function(){ card.style.transform = ""; });
+    });
+  }
+  Array.prototype.forEach.call(document.querySelectorAll(".thumb-art"), function(cv){
+    var ctx = cv.getContext("2d");
+    var W = cv.width = 640, H = cv.height = 340, hue = +cv.getAttribute("data-hue") || 210;
+    ctx.fillStyle = "hsl(" + hue + ",62%,13%)"; ctx.fillRect(0, 0, W, H);
+    var nodes = [], i, j;
+    for (i = 0; i < 26; i++) nodes.push({x: Math.random() * W, y: Math.random() * H});
+    ctx.strokeStyle = "hsla(" + hue + ",85%,65%,.28)"; ctx.lineWidth = 1;
+    for (i = 0; i < nodes.length; i++) for (j = i + 1; j < nodes.length; j++) {
+      var dx = nodes[i].x - nodes[j].x, dy = nodes[i].y - nodes[j].y;
+      if (dx * dx + dy * dy < 13000) { ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke(); }
+    }
+    nodes.forEach(function(n){
+      ctx.beginPath(); ctx.arc(n.x, n.y, 3.2, 0, 7);
+      ctx.fillStyle = "hsl(" + hue + ",90%,70%)"; ctx.fill();
+    });
+  });
+
+  /* ---------- scroll reveal ---------- */
+  var io = ("IntersectionObserver" in window) && !reduced ? new IntersectionObserver(function(es){
+    es.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold: 0.12}) : null;
+  Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function(el){
+    if (io) io.observe(el); else el.classList.add("in");
+  });
+})();
+</script>
+<script>
+(function(){
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var els = document.querySelectorAll(".count b[data-count]");
+  function setFinal(el){ el.textContent = el.getAttribute("data-count"); }
+  if (reduced || !("IntersectionObserver" in window)) { els.forEach(setFinal); return; }
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var el = en.target, target = +el.getAttribute("data-count"), t0 = null;
+      io.unobserve(el);
+      function tick(ts){
+        if (!t0) t0 = ts;
+        var p = Math.min(1, (ts - t0) / 900);
+        el.textContent = Math.round(target * p);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, {threshold: 0.4});
+  els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
